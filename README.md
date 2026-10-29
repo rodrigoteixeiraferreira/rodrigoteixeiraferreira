@@ -9,11 +9,27 @@ I build AI agents where the business logic lives in the database, not in the pro
 Availability, pricing, atomic transactions and balance calculations are SQL functions.
 The model interprets intent and routes to tools. Three consequences: it runs on cheap
 models, it isn't tied to a vendor, and it can't be wrong about numbers it never
-calculates.
+calculates. When a model does decide something, its error rate is measured by sample, and
+above the limit it stops deciding on its own.
 
 ---
 
 ### Projects
+
+**[comparador-listas-fornecedores](https://github.com/rodrigoteixeiraferreira/comparador-listas-fornecedores)** — Supplier price-list comparator: case study and runnable demo
+Delivered in October 2026 to a neighborhood supermarket. Reads supplier price lists from
+spreadsheets, PDFs and photos, matches each line to the store's catalog in a SQL cascade
+and shows who sells cheapest. Acceptance criterion: zero false positives — 0 contradictions
+in confirmed pairs, AI error measured by sample (1 in 145). The public demo is rewritten
+from scratch with fictional data and proves itself: 0 wrong pairs in 5 generated worlds,
+51 of 51 corrupted lists held at the gate.
+`PostgreSQL` · `Supabase` · `Python` · `Next.js` · `Claude Code`
+
+**[agente-matriculas-ia](https://github.com/rodrigoteixeiraferreira/agente-matriculas-ia)** — AI enrollment agent
+Looks up courses, checks open seats and records pre-registrations by chat. The business
+rules are versioned SQL functions: the model interprets intent and picks tools, but never
+decides about a seat.
+`FastAPI` · `Google Gemini` · `PostgreSQL` · `Docker` · `CI`
 
 **[agente-hoteleiro-ia](https://github.com/rodrigoteixeiraferreira/agente-hoteleiro-ia)** — AI booking agent for independent hotels
 Real availability by date overlap, atomic reservations with `FOR UPDATE`, multimodal
@@ -32,14 +48,14 @@ base, so they can't contradict each other.
 
 ### Stack
 
-`n8n` `Supabase` `PostgreSQL` `PL/pgSQL` `pgvector` `RAG` `Google Gemini`
-`Claude API` `REST APIs` `Lovable` `Cursor` `Claude Code` `Git`
+`n8n` `Supabase` `PostgreSQL` `PL/pgSQL` `pgvector` `RAG` `Python` `FastAPI` `Next.js`
+`Google Gemini` `Claude API` `REST APIs` `Docker` `Lovable` `Cursor` `Claude Code` `Git`
 
 ---
 
 ### About
 
-Based in Villa Carlos Paz, Argentina — GMT-3, same timezone as Brazil. Working remotely.
+Based in Argentina — GMT-3, same timezone as Brazil. Working remotely.
 Portuguese (native) · Spanish (fluent) · English (technical reading).
 
 Every repository here is something I can explain and modify. Nothing is decorative.
