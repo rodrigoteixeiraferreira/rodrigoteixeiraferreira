@@ -2,7 +2,7 @@
 
 # Rodrigo Teixeira Ferreira
 
-**Ingeniero de Automatización e IA** — n8n · Supabase · PostgreSQL · RAG
+**Automatización, datos y agentes de IA** — PostgreSQL/Supabase · Python · Next.js · n8n · Claude Code
 
 Construyo agentes de IA donde la lógica de negocio vive en la base de datos, no en el prompt.
 
@@ -17,20 +17,15 @@ arriba del límite deja de decidir solo.
 ### Proyectos
 
 **[comparador-listas-fornecedores](https://github.com/rodrigoteixeiraferreira/comparador-listas-fornecedores)** — Comparador de listas de precios de proveedores: estudio de caso y demo que corre
-Entregado en octubre de 2026 a un supermercado de barrio. Lee listas de precios de
+Entregado en octubre de 2026 a un supermercado en Argentina. Lee listas de precios de
 proveedores en planilla, PDF y foto, identifica cada línea en el catálogo de la tienda con
 una cascada en SQL y muestra quién vende más barato. Criterio de aceptación: cero falsos
-positivos — 0 contradicciones en los pares confirmados, error de la IA medido por muestra
-(1 en 145). La demo pública está reescrita desde cero, con datos ficticios, y se prueba
-sola: 0 pares equivocados en 5 mundos generados, 51 de 51 listas arruinadas retenidas en el
-portón.
+positivos. En la base al 30/10/2026: 4.026 de los 4.929 productos de la tienda identificados,
+2.569 con precio de dos o más proveedores (antes, 199) y 0 pares confirmados con marca,
+tamaño o unidad incompatible; error de la IA medido por muestra (1 en 145). La demo pública
+está reescrita desde cero, con datos ficticios, y se prueba sola: 0 pares equivocados en 5
+mundos generados, 51 de 51 listas arruinadas retenidas en el portón.
 `PostgreSQL` · `Supabase` · `Python` · `Next.js` · `Claude Code`
-
-**[agente-matriculas-ia](https://github.com/rodrigoteixeiraferreira/agente-matriculas-ia)** — Agente de IA para inscripciones
-Consulta cursos, verifica cupos y registra preinscripciones por chat. Las reglas de negocio
-son funciones SQL versionadas: el modelo interpreta la intención y elige la herramienta,
-pero nunca decide sobre un cupo.
-`FastAPI` · `Google Gemini` · `PostgreSQL` · `Docker` · `CI`
 
 **[agente-hoteleiro-ia](https://github.com/rodrigoteixeiraferreira/agente-hoteleiro-ia)** — Agente de reservas para hoteles independientes
 Disponibilidad real por solapamiento de fechas, reserva atómica con `FOR UPDATE`,
@@ -49,7 +44,7 @@ central, de modo que no puedan contradecirse.
 
 ### Stack
 
-`n8n` `Supabase` `PostgreSQL` `PL/pgSQL` `pgvector` `RAG` `Python` `FastAPI` `Next.js`
+`n8n` `Supabase` `PostgreSQL` `PL/pgSQL` `pgvector` `RAG` `Python` `Next.js`
 `Google Gemini` `Claude API` `APIs REST` `Docker` `Lovable` `Cursor` `Claude Code` `Git`
 
 ---
